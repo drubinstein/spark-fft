@@ -1,6 +1,6 @@
-package Fft
+package fft
 
-import Complex.Complex
+import complex.Complex
 /**
   * Created by david on 7/4/17.
   */
