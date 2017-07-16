@@ -1,3 +1,4 @@
+package complex
 /**
   * Created by david on 7/16/17.
   */
@@ -18,10 +19,6 @@ class Complex(val real: Double, val imag: Double) {
 
   def conj() = new Complex(this.real, -this.imag)
 
-  def magsqr(): Double = {
-    this.real * this.real + this.imag * this.imag
-  }
-
   //Operations where one operand is complex and the other is real
   def +(other: Double) = new Complex(this.real + other, this.imag)
 
@@ -30,6 +27,10 @@ class Complex(val real: Double, val imag: Double) {
   def *(other: Double) = new Complex(this.real * other, this.imag * other)
 
   def mag(): Double = Math.sqrt(this.magsqr())
+
+  def magsqr(): Double = {
+    this.real * this.real + this.imag * this.imag
+  }
 
   def ==(other: Complex): Boolean = {
     this.real == other.real && this.imag == other.imag
