@@ -3,7 +3,7 @@ package complex
   * Created by david on 7/16/17.
   */
 class Complex(val real: Double, val imag: Double) {
-  //Operations where both operands are complex
+  //Operations where both operands are Complex
   def +(other: Complex) = new Complex(this.real + other.real, this.imag + other.imag)
 
   def -(other: Complex) = new Complex(this.real - other.real, this.imag - other.imag)
@@ -19,7 +19,7 @@ class Complex(val real: Double, val imag: Double) {
 
   def conj() = new Complex(this.real, -this.imag)
 
-  //Operations where one operand is complex and the other is real
+  //Operations where one operand is Complex and the other is real
   def +(other: Double) = new Complex(this.real + other, this.imag)
 
   def -(other: Double) = new Complex(this.real - other, this.imag)
@@ -35,4 +35,6 @@ class Complex(val real: Double, val imag: Double) {
   def ==(other: Complex): Boolean = {
     this.real == other.real && this.imag == other.imag
   }
+
+  override def toString(): String = {real + "+" + imag + "j"}
 }
